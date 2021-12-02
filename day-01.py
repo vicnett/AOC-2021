@@ -5,7 +5,10 @@ raw_input = input_file.read().splitlines()
 int_input = [ int(i) for i in raw_input ]
 
 def compare(some_int_list):
-     return [ value > some_int_list[max(n - 1, 0)] for n, value in enumerate(some_int_list) ]
+    return [
+        value > some_int_list[max(n - 1, 0)]
+        for n, value in enumerate(some_int_list)
+    ]
 
 part_one_answer = sum(compare(int_input))
 
